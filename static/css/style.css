@@ -1,0 +1,133 @@
+body { 
+	margin: 0; 
+	background-image: url("https://unpkg.com/three-globe@2.18.11/example/img/night-sky.png");
+}
+
+#search {
+	position: absolute;
+	top: 2%;
+	padding: 0 20px;
+	max-width: 350px;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.5);
+	z-index: 9999;
+	line-height: 1.5;
+}
+
+#loading {
+	visibility: hidden;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	box-shadow:
+	0 -3em rgba(255, 255, 255, 1),
+	2.25em -2.25em rgba(255, 255, 255, 0.875),
+	3em 0 rgba(255, 255, 255, 0.75),
+	2.25em 2.25em rgba(255, 255, 255, 0.625),
+	0 3em rgba(255, 255, 255, 0.5),
+	-2.25em 2.25em rgba(255, 255, 255, 0.375),
+	-3em 0 rgba(255, 255, 255, 0.25),
+	-2.25em -2.25em rgba(255, 255, 255, 0.125)
+	;
+	animation: spin 1.2s linear infinite;
+	z-index: 9999;
+}
+
+@keyframes spin {
+  100% { transform: rotate(-360deg) }
+}
+
+.terminal {
+  cursor: text;
+  width: 33vw;
+  height: 20vh;
+  counter-reset: input;
+  margin: 20px;
+  padding: 0;
+  background-color: transparent;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-family: Menlo, Courier New;
+  font-size: .7vw;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  color: white;
+  overflow:auto;
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+  padding: 0 20px;
+  max-width: 30vw
+  width: 100%;
+  color: white;
+  z-index: 9999;
+  line-height: 1.5;
+}
+.terminal > .terminal--input {
+  counter-increment: input;
+}
+.terminal > .terminal--input:before {
+  content: "bot@localhost ~/ $ ";
+  color:green;
+}
+.terminal > .terminal--input:last-child:after {
+  -webkit-animation: blink 0.75s infinite;
+  -moz-animation: blink 0.75s infinite;
+  -o-animation: blink 0.75s infinite;
+  animation: blink 0.75s infinite;
+  margin-left: 5px;
+  width: 28px;
+  content: "|";
+  background: white;
+}
+.terminal > .terminal--output {
+  color: rgba(255, 255, 255, 0.5);
+}
+.terminal > .terminal--output.is-console:before {
+  margin-right: 10px;
+  content: ">";
+}
+.terminal > .terminal--output.is-not-defined:before {
+  content: "undefined";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
