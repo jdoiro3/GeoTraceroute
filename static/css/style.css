@@ -74,7 +74,7 @@ body {
   counter-increment: input;
 }
 .terminal > .terminal--input:before {
-  content: "bot@localhost ~/ $ ";
+  content: "user@localhost ~/ $ ";
   color:green;
 }
 .terminal > .terminal--input:last-child:after {
