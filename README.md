@@ -14,7 +14,8 @@ https://user-images.githubusercontent.com/57968347/138023883-281f3282-d7d2-426a-
 
 1. get an IPinfo.io free account (directions [here](https://ipinfo.io/signup)).
 2. install source (`git pull https://github.com/jdoiro3/GeoTraceroute`)
-3. create Python venv, activate and install packages
+3. paste access token into `static/scripts/token.json`
+4. create Python venv, activate and install packages
 ```shell
 python3 -m venv env
 source env/bin/activate
