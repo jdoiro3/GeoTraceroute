@@ -8,7 +8,6 @@ https://user-images.githubusercontent.com/57968347/138023883-281f3282-d7d2-426a-
 
 - Python
 - IPinfo.io free account (50K requests/month)
-- Linux (only OS currently supported)
 
 # Setup
 
