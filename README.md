@@ -24,3 +24,8 @@ python3 -m pip install -r requirements.txt
 ```
 4. run `python3 start_server.py`
 
+# TODO
+
+- [ ] clean up code (it all seems a bit hacky currently)
+- [ ] write tests
+
